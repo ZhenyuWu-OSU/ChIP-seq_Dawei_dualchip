@@ -1,0 +1,22 @@
+
+# Deeptool Visulization 
+```
+bamCoverage --bam a.bam -o a.SeqDepthNorm.bw \
+    --binSize 10
+    --normalizeUsing RPGC
+    --effectiveGenomeSize 2652783500
+    --ignoreForNormalization chrX
+    --extendReads
+```
+
+```
+computeMatrix reference-point \ # choose the mode
+       --referencePoint TSS \ # alternatives: TES, center
+       -b 3000 -a 10000 \ # define the region you are interested in
+       -R testFiles/genes.bed \
+       -S testFiles/log2ratio_H3K4Me3_chr19.bw  \
+       --skipZeros \
+       -o matrix1_H3K4me3_l2r_TSS.gz \ # to be used with plotHeatmap and plotProfile
+       --outFileSortedRegions regions1_H3K4me3_l2r_genes.bed
+
+```

@@ -1,0 +1,4 @@
+
+cd HOME/$working_directory
+ml bedtools
+bedtools intersect -a $Spt16.bed -b $Brd4.bed > intersect.bed
