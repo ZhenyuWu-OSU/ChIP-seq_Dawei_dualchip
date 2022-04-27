@@ -1,0 +1,26 @@
+######## to build and use ENCODE CHIP-seq V2 pipeline, please check https://github.com/ENCODE-DCC/chip-seq-pipeline2
+
+### here is the input.json files for C2C12 spt16 processing
+{
+    "chip.pipeline_type": "tf",
+    "chip.genome_tsv": "/users/PAS1475/zhenyuwu/genome/chip_genome/mm10.tsv",
+    "chip.ctl_fastqs_rep1_R1": [
+        "/fs/ess/PCON0022/zhenyuwu/Dawei_dualCHIPseq/C2C12_Spt16_GSE116169/SRR9326249.sra_1.fastq"
+    ],
+    "chip.ctl_fastqs_rep1_R2": [
+        "/fs/ess/PCON0022/zhenyuwu/Dawei_dualCHIPseq/C2C12_Spt16_GSE116169/SRR9326249.sra_2.fastq"
+    ],
+ 
+    "chip.fastqs_rep1_R1": [
+        "/fs/ess/PCON0022/zhenyuwu/Dawei_dualCHIPseq/C2C12_Spt16_GSE116169/SRR9326257.sra_1.fastq"
+    ],
+    "chip.fastqs_rep1_R2": [
+        "/fs/ess/PCON0022/zhenyuwu/Dawei_dualCHIPseq/C2C12_Spt16_GSE116169/SRR9326257.sra_2.fastq"
+    ],
+    "chip.paired_end": true,
+    "chip.ctl_paired_end" : true,
+    "chip.title": "C2C12_Spt16_GSE116169",
+    "chip.description": "C2C12_Spt16_GSE116169",
+    "chip.idr_thresh":
+}
+
