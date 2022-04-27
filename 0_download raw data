@@ -1,0 +1,13 @@
+##### all the following commands are run in OSC supercomputer cluster
+
+## To download the raw file you need to go to GEO and download the SRR_ACC_list first and upload it to your working directory.
+
+# download the SRA files
+cd HOME/$working_directory
+ml sratoolkit/2.9.1 
+nohup prefetch -O . $(<SRR_Acc_List.txt) &
+
+# SRA to FASTQ
+for i in *sra; do echo $i; fasterq-dump --split-3  $i;done
+## alternatively fasterq is faster 
+for i in *sra;do echo $i;fasterq-dump --split-3 $i;done
